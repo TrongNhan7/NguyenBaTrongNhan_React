@@ -6,7 +6,7 @@ import Cars from "./cars";
 import {Link, useNavigate} from "react-router-dom";
 import {Button} from "react-bootstrap";
 
-function Home(props) {
+function Home() {
 
     let history = useNavigate();
 
@@ -15,9 +15,7 @@ function Home(props) {
         Cars.splice(index, 1);
         history("/");
     };
-    const handleEdit = (id, car) => {
 
-    }
     return (
         <div>
             < Header/>
@@ -41,7 +39,7 @@ function Home(props) {
                         <td>{car.manufacturer}</td>
                         <td>
                             <Link to={"/edit/" + car.id}>
-                                <Button onClick={() => handleEdit(car.id, car)}>Edit</Button>
+                                <Button>Edit</Button>
                             </Link>
                         </td>
                         <td>

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import {useNavigate, useParams} from "react-router-dom";
 import Cars from "./cars";
 
-function Edit(props) {
+function Edit() {
     let history = useNavigate();
     let {id} = useParams();
     const index = Cars.map(e => e.id).indexOf(id);
@@ -13,7 +13,7 @@ function Edit(props) {
     const [name, setName] = useState(car.name);
     const [price, setPrice] = useState(car.price);
     const [manufacturer, setManufacturer] = useState(car.manufacturer);
- 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = Cars[index];
