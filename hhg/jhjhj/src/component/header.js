@@ -16,7 +16,6 @@ class Header extends React.Component{
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            <i className="fas fa-bars"></i>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
